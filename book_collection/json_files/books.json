@@ -1,0 +1,14 @@
+[
+    {
+        "title": "First title",
+        "author": "First Author",
+        "year": 2000,
+        "pages": 200
+    },
+    {
+        "title": "Second title",
+        "author": "Second Author",
+        "year": 2001,
+        "pages": 150
+    }
+]
