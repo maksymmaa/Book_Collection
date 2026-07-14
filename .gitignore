@@ -1,0 +1,10 @@
+# IDE and System Files
+.idea/
+.DS_Store
+
+# Python Byte-code Cache
+**/__pycache__/
+*.py[cod]
+
+# Local Database Cache (JSON files)
+book_collection/json_files/*.json
