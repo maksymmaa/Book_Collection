@@ -10,5 +10,11 @@
         "author": "Second Author",
         "year": 2001,
         "pages": 150
+    },
+    {
+        "title": "Third",
+        "author": "Third author",
+        "year": 1999,
+        "pages": 160
     }
 ]

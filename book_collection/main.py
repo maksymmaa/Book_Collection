@@ -1,12 +1,14 @@
 import services.book_service as bs
 import json
 
-def main():
+from models.book import Book
+
+def main() -> None:
     try:
-        books = bs.load_books()
+        books: list[Book] = bs.load_books()
     except (FileNotFoundError, json.JSONDecodeError):
         print('\nFile not found! Creating a new one...\n')
-        books = []
+        books: list[Book] = []
         bs.save_books(books)
 
     print('BOOK COLLECTION'.center(70, '-'))
@@ -20,22 +22,22 @@ def main():
               '5. Compare books\n'
               'q. Exit\n')
 
-        choice = input('Please enter something to choose a function: ').lower().strip()
+        choice: str = input('Please enter something to choose a function: ').lower().strip()
         print()
 
         match choice:
             case '1':
-                title = input('Enter the title: ')
-                author = input('Enter the author: ')
+                title: str = input('Enter the title: ')
+                author: str = input('Enter the author: ')
 
                 try:
-                    year = int(input('Enter the year of the book: '))
+                    year: int = int(input('Enter the year of the book: '))
                 except ValueError:
                     print('\nYear should be entered as integer!\n')
                     continue
 
                 try:
-                    pages = int(input('Enter the number of pages: '))
+                    pages: int = int(input('Enter the number of pages: '))
                 except ValueError:
                     print('\nPages should be entered as integer!\n')
                     continue
@@ -70,7 +72,7 @@ def main():
 
                 print('Sorted books:\n')
 
-                sorted_books = bs.sort_books(books)
+                sorted_books: list[Book] = bs.sort_books(books)
 
                 bs.show_books(sorted_books)
             case '5':
@@ -80,25 +82,25 @@ def main():
                     continue
 
                 try:
-                    book1_index = int(input('Please enter index (0-n) of the first book to compare: '))
+                    book1_index: int = int(input('Please enter index (0-n) of the first book to compare: '))
                 except ValueError:
                     print('\nIndex should be entered as integer!\n')
                     continue
 
                 try:
-                    book2_index = int(input('Please enter index (0-n) of the second book to compare: '))
+                    book2_index: int = int(input('Please enter index (0-n) of the second book to compare: '))
                 except ValueError:
                     print('\nIndex should be entered as integer!\n')
                     continue
 
                 try:
-                    book1 = books[book1_index]
+                    book1: Book = books[book1_index]
                 except IndexError:
                     print('\nIndex is out of range!\n')
                     continue
 
                 try:
-                    book2 = books[book2_index]
+                    book2: Book = books[book2_index]
                 except IndexError:
                     print('\nIndex is out of range!\n')
                     continue
