@@ -1,4 +1,4 @@
-A modular, clean command-line application designed to catalogue books, evaluate library scopes, and seamlessly sort or compare distinct literary works.
+A modular, clean command-line application designed to catalogue books, evaluate library scopes and seamlessly sort or compare distinct literary works.
 
 ## Features
 * **Advanced Operator Overloading (Dunder Methods):** Leverages Python's native magic methods within the core data structure:
@@ -35,7 +35,7 @@ Book Collection/
 Python 3.10 or higher is required due to the structural implementation of match/case statement menus.
 
 ## How to Run
-Clone this directory onto your computer, navigate to the source root containing main.py, and launch it via terminal:
+Clone this directory onto your computer, navigate to the source root containing main.py and launch it via terminal:
 
 ```Bash
 python main.py
